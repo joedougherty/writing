@@ -91,13 +91,11 @@ Here is a different way to express `ends_in_zero`:
             return (n // 2 * -1) * 10
         else:
             return ((n + 1) // 2) * 10
-
-
-	def ends_in_zero():
-		return (map_nat_to_eiz(_) for _ in N)
-
-
-	Ends_in_Zero = ends_in_zero()
+    
+    def ends_in_zero():
+        return (map_nat_to_eiz(_) for _ in N)
+    
+    Ends_in_Zero = ends_in_zero()
 
 
 This version helps to make the one-to-one correspondence more obvious (explicit?). 
