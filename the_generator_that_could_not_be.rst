@@ -84,23 +84,23 @@ Here is a different way to express `ends_in_zero`:
 
 .. code-block:: python
 
-	def ends_in_zero():
-		N = naturals() # Let's fire up a new naturals generator
-		
-		def map_nat_to_eiz(n):
-			if n == 0:
-				return 0
-			elif n % 2 == 0:
-				return (n // 2 * -1) * 10
-			else:
-				return ((n + 1) // 2) * 10
+    def map_nat_to_eiz(n):
+        if n == 0:
+            return 0
+        elif n % 2 == 0:
+            return (n // 2 * -1) * 10
+        else:
+            return ((n + 1) // 2) * 10
 
+
+	def ends_in_zero():
 		return (map_nat_to_eiz(_) for _ in N)
+
 
 	Ends_in_Zero = ends_in_zero()
 
 
-This version helps to make the one-to-one correspondence more obvious (explicit?).
+This version helps to make the one-to-one correspondence more obvious (explicit?). 
 
 Every time `next(Ends_in_Zero)` is called, `N` is advanced to produce a new value. 
 
