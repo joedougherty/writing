@@ -11,7 +11,7 @@ You happen to both know a bit of Python. George decides to explain some of his i
 
 "First off, let's represent the Natural numbers." George proffers the following:
 
-    <code>
+.. code-block:: python
 
     def naturals():
         n = 1
@@ -19,14 +19,11 @@ You happen to both know a bit of Python. George decides to explain some of his i
             yield n
             n += 1
 
-
     N = naturals()
-
-    </code>
 
 Likewise, the odds, evens, etc.
 
-    <code>
+.. code-block:: python
 
     def odds():
         n = 1
@@ -35,8 +32,6 @@ Likewise, the odds, evens, etc.
             n += 2
 
     Odds = odds()
-
-    </code>
 
 This seems all fine and good as far as it goes. You start work on a Primes generator. 
 
@@ -56,7 +51,7 @@ You know that something fun must be around the corner.
 
 You smile to yourself as you dash off the following into the buffer:
 
-    <code>
+.. code-block:: python
 
     def ends_in_zero():
         n = 0
@@ -66,8 +61,14 @@ You smile to yourself as you dash off the following into the buffer:
             yield -n
 
     Ends_in_Zero = ends_in_zero()
+
+
+[ -- Not sure if this belongs here -- ]
+George asks enthusiastically about the second `yield` in your ends_in_zero implementation. 
+
+"Well, I realized we needed to include the negative numbers that ended in zero as well." 
+[ -- Not sure if this belongs here -- ]
         
-    </code>
 
 You cackle maniacally as you prepare to call `len([_ for _ in Ends_in_Zero])` knowing full well this 
 
@@ -79,7 +80,7 @@ insanity and agrees to be direct in his pedagogy moving forward.
 
 What about the second `yield` in ends_in_zero()? Doesn't that somehow produce twice as many numbers as, say,
 
-naturals() which only `yield`s once per iteration?
+naturals() which will only `yield` once per iteration?
 
 You've known George long enough to know when he is only asking rhetorically. Thankfully, that's
 
@@ -95,7 +96,7 @@ the negative ones."
 
 Here is a different way to express `ends_in_zero`:
 
-    <code>
+.. code-block:: python
 
 	def ends_in_zero():
 		N = naturals() # Let's fire up a new naturals generator
@@ -112,7 +113,6 @@ Here is a different way to express `ends_in_zero`:
 
 	Ends_in_Zero = ends_in_zero()
 
-    </code>
 
 This version helps to make the one-to-one correspondence more obvious (explicit?).
 
@@ -129,20 +129,131 @@ Mathematicians call this the _cardinality_ of a set.
 
 George shows some clever mappings.
 
-	<code>
+.. code-block:: python
 
 	# Map naturals to rationals to show 
 	# they have one-to-one correspondence
 	def inverse_paring(n):
 		pass
 
-	</code>
+
+"Neat! So I just need to write a function and I can show *any* sequence is the same cardinality of the 
+
+naturals."
+
+You start packing your things up, glad that you were finally able to pick up on George's ideas.
+
+"Well..." you hear George start in.
+
+( TRANSITION REQUIRED HERE )
+
+"What do you think about the Reals? Say, all the reals between [0,1]."
+
+You immediately start to grow unsure. Why did he always do this? 
+
+Aren't some (maybe a lot) of the reals represented by infinite sequences?
+
+.. code-block:: python
+
+    # Consider the zero and decimal point implicit
+    def one_third():
+        while True:
+            yield 3
 
 
+    One_Third = one_third() # Never-ending stream of 3s
 
-[ -- Not sure if this belongs here -- ]
-George asks enthusiastically about the second `yield` in your ends_in_zero implementation. 
 
-"Well, I realized we needed to include the negative numbers that ended in zero as well." 
-[ -- Not sure if this belongs here -- ]
+Seems fine so far. And there's no issue with a generator that yields other generators, right?
 
+.. code-block:: python
+    
+    # 0.111111111111111111...
+    def point_1_repeating():
+        while True:
+            yield 1
+
+
+    # 0.12121212121212121212...
+    def alternating_sequence():
+        while True:
+            yield 1
+            yield 2
+   
+
+    def some_reals():
+        yield point_1_repeating()
+        yield 0.1 
+        yield alternating_sequence()
+        yield 0.2
+        yield one_third()
+        # etc. 
+
+
+So far it is not clear what George is hinting at. True, it isn't obvious how to write the mapping function
+
+from the naturals to the reals. Nor was it obvious how to map to the rationals!
+
+You need to be going, but agree to meet with George next week for what he promises will be
+
+a thrilling conclusion.
+
+A week has passed. 
+
+George asks if you were able to write the mapping function from the naturals to the reals.
+
+"Sadly it has escaped me." you sheepishly admit. 
+
+"I look forward to seeing your clever implementation, though!"
+
+"Oh, don't feel bad! I actually want you to show you something simple. I want to show you
+
+that it can't be done."
+
+.. code-block:: python
+
+    def mirror_digit(n):
+        plus_two = n + 2
+        if plus_two < 10:
+            return plus_two
+        return plus_two % 2
+
+
+    def brand_new_real(G):
+        digit_place = 1
+        for real in G:
+            while True:
+                for i in range(0, digit_place):
+                    nth_digit = next(real)
+                yield mirror_digit(nth_digit)
+            digit_place += 1
+
+
+"Wh-what _is_ this?" 
+
+`mirror_digit` takes a digit [0-9] and returns the provided digit plus 2. If the given digit + 2 
+
+would result in a two-digit number, it just wraps back around to 0. This function allows us to 
+
+create a sequence of numbers we haven't seen yet. For example, if you composed `mirror_digit` with
+
+one of the reals generators (such as `alternating_sequence()`), you would get a new number that would
+
+differ from the original number by *every single digit*.
+
+We can exploit this to *guarantee* we can generate a previously ungenerated real. 
+
+We create a sequence where we generate:
+
+    * the mirror of the first digit of the first real
+    * the mirror of the second digit of the second real
+    * the mirror of the third digit of the third real
+    and so on ...
+
+(That's what's going on with that digit_place variable. I want to call next() as many times as reals generators I've seen 
+
+so far.)
+
+Here's the crux of it! When George said it can't be done, it's because you can always generate a new real
+
+using the power of brand_new_real(). But if it's new, then you can't map the naturals to the reals!
