@@ -37,7 +37,7 @@ This seems all fine and good as far as it goes. You start work on a Primes gener
 
 "How many primes are there again?" 
 
-You recall Euclid's demonstration[LINK] that we can always generate a new prime number by multiplying the largest two known primes and adding 1.
+You recall `Euclid's proof <https://mathcs.clarku.edu/~djoyce/java/elements/bookIX/propIX20.html>`  that there are infinite primes.
 
 "Infinitely many." 
 
