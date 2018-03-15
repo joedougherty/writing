@@ -33,19 +33,15 @@ Likewise, the odds, evens, etc.
 
     Odds = odds()
 
-This seems all fine and good as far as it goes. You start work on a Primes generator. 
+This seems all fine and good as far as it goes. You start work on a Primes generator. George waits patiently for you to run a few tests. Once you are satisfied he inquires: 
 
-George waits patiently for you to run a few tests. Once you are satisfied he inquires: 
+"How many primes are there again?" 
 
-"How many primes are there again?" You recall Euclid's demonstration that we can always
-
-generate a new prime number by multiplying the largest two known primes and adding 1.
+You recall Euclid's demonstration[LINK] that we can always generate a new prime number by multiplying the largest two known primes and adding 1.
 
 "Infinitely many." 
 
-Your terseness belies your anticipation of his next question. 
-
-You know that something fun must be around the corner.
+Your terseness belies your anticipation of his next question. You know that something fun must be around the corner.
 
 "How about, oh, numbers that end in 0?"
 
@@ -70,29 +66,19 @@ George asks enthusiastically about the second `yield` in your ends_in_zero imple
 [ -- Not sure if this belongs here -- ]
         
 
-You cackle maniacally as you prepare to call `len([_ for _ in Ends_in_Zero])` knowing full well this 
+You cackle maniacally as you prepare to call `len([_ for _ in Ends_in_Zero])` knowing full well this will pin a core and render the current terminal sesssion useless. 
 
-will pin a core and render the current terminal sesssion useless. George defers to your apparent temporary 
-
-insanity and agrees to be direct in his pedagogy moving forward.
+George defers to your apparent temporary insanity and agrees to be direct in his pedagogy moving forward.
 
 "Seriously, though. It's the same thing. They're both infinite."
 
-What about the second `yield` in ends_in_zero()? Doesn't that somehow produce twice as many numbers as, say,
+What about the second `yield` in ends_in_zero()? Doesn't that somehow produce twice as many numbers as, say, naturals() which will only `yield` once per iteration?
 
-naturals() which will only `yield` once per iteration?
+You've known George long enough to know when he is only asking rhetorically. Thankfully, that's almost always followed by a period of clear, but rapid, explication.
 
-You've known George long enough to know when he is only asking rhetorically. Thankfully, that's
-
-almost always followed by a period of clear, but rapid, explication.
-
-"You are right, of course! There *are* just as many numbers ending in 0 as there are naturals, even when including
-
-the negative ones."
+"You are right, of course! There *are* just as many numbers ending in 0 as there are naturals, even when including the negative ones."
 
 "The key is that we can map every natural number to precisely one number being produced in the new generator."
-
-(You notice George starting to get a distant look in his eye(s?).)
 
 Here is a different way to express `ends_in_zero`:
 
@@ -125,7 +111,7 @@ We could use this as an informal definition of one-to-one correspondence:
 	for every value yielded by N, then that series must be of the 
 	same "size" of N.
 
-Mathematicians call this the _cardinality_ of a set.
+Mathematicians call this the *cardinality* of a set.
 
 George shows some clever mappings.
 
@@ -137,15 +123,11 @@ George shows some clever mappings.
 		pass
 
 
-"Neat! So I just need to write a function and I can show *any* sequence is the same cardinality of the 
-
-naturals."
+"Neat! So I just need to write a function and I can show *any* sequence is the same cardinality of the naturals."
 
 You start packing your things up, glad that you were finally able to pick up on George's ideas.
 
 "Well..." you hear George start in.
-
-( TRANSITION REQUIRED HERE )
 
 "What do you think about the Reals? Say, all the reals between [0,1]."
 
@@ -190,25 +172,17 @@ Seems fine so far. And there's no issue with a generator that yields other gener
         # etc. 
 
 
-So far it is not clear what George is hinting at. True, it isn't obvious how to write the mapping function
+So far it is not clear what George is hinting at. True, it isn't obvious how to write the mapping function from the naturals to the reals. Nor was it obvious how to map to the rationals!
 
-from the naturals to the reals. Nor was it obvious how to map to the rationals!
-
-You need to be going, but agree to meet with George next week for what he promises will be
-
-a thrilling conclusion.
+You need to be going, but agree to meet with George next week for what he promises will be a thrilling conclusion.
 
 A week has passed. 
 
 George asks if you were able to write the mapping function from the naturals to the reals.
 
-"Sadly it has escaped me." you sheepishly admit. 
+"Sadly it has escaped me." you sheepishly admit. "I look forward to seeing your clever implementation, though!"
 
-"I look forward to seeing your clever implementation, though!"
-
-"Oh, don't feel bad! I actually want you to show you something simple. I want to show you
-
-that it can't be done."
+"Oh, don't feel bad! I actually want you to show you something simple. I want to show you that it can't be done."
 
 .. code-block:: python
 
@@ -254,6 +228,4 @@ We create a sequence where we generate:
 
 so far.)
 
-Here's the crux of it! When George said it can't be done, it's because you can always generate a new real
-
-using the power of brand_new_real(). But if it's new, then you can't map the naturals to the reals!
+Here's the crux of it! When George said it can't be done, it's because you can always generate a new real using the power of brand_new_real(). But if it's new, then you can't map the naturals to the reals!
