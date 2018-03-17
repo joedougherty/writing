@@ -65,7 +65,7 @@ George defers to your apparent temporary insanity and agrees to be direct in his
 
 "Seriously, though. It's the same thing. They're both infinite."
 
-What about the second `yield` in ends_in_zero()? Doesn't that somehow produce twice as many numbers as, say, naturals() which will only `yield` once per iteration?
+What about the second :code:`yield` in ends_in_zero()? Doesn't that somehow produce twice as many numbers as, say, naturals() which will only :code:`yield` once per iteration?
 
 You've known George long enough to know when he is only asking rhetorically. Thankfully, that's almost always followed by a period of clear, but rapid, explication.
 
@@ -73,7 +73,7 @@ You've known George long enough to know when he is only asking rhetorically. Tha
 
 "The key is that we can map every natural number to precisely one number being produced in the new generator."
 
-Here is a different way to express `ends_in_zero`:
+Here is a different way to express :code:`ends_in_zero`:
 
 .. code-block:: python
 
@@ -93,7 +93,7 @@ Here is a different way to express `ends_in_zero`:
 
 This version helps to make the one-to-one correspondence more obvious (explicit?). 
 
-Every time `next(Ends_in_Zero)` is called, `N` is advanced to produce a new value. 
+Every time :code:`next(Ends_in_Zero)` is called, :code:`N` is advanced to produce a new value. 
 
 We could use this as an informal definition of one-to-one correspondence:
 
@@ -111,7 +111,7 @@ George shows some clever mappings.
 	# Map naturals to rationals to show 
 	# they have one-to-one correspondence
 	def inverse_paring(n):
-		pass
+        pass
 
 
 "Neat! So I just need to write a function and I can show *any* sequence is the same cardinality of the naturals."
@@ -193,13 +193,13 @@ George asks if you were able to write the mapping function from the naturals to 
             digit_place += 1
 
 
-"Wh-what _is_ this?" 
+"Wh-what *is* this?" 
 
-`mirror_digit` takes a digit [0-9] and returns the provided digit plus 2. If the given digit + 2 would result in a two-digit number, it just wraps back around to 0. This function allows us to create a sequence of numbers we haven't seen yet. 
+:code:`mirror_digit` takes a digit [0-9] and returns the provided digit plus 2. If the given digit + 2 would result in a two-digit number, it just wraps back around to 0. This function allows us to create a sequence of numbers we haven't seen yet. 
 
-For example, if you composed `mirror_digit` with one of the reals generators (such as `alternating_sequence()`), you would get a new number that would differ from the original number by *every single digit*.
+For example, if you composed :code:`mirror_digit` with one of the reals generators (such as :code:`alternating_sequence()`), you would get a new number that would differ from the original number by **every single digit**.
 
-We can exploit this to *guarantee* we can generate a previously ungenerated real. 
+We can exploit this to generate a previously ungenerated real.
 
 We create a sequence where we generate:
 
@@ -212,4 +212,7 @@ We create a sequence where we generate:
 
 Here's the crux of it! When George said it can't be done, it's because you can always generate a new real using the power of brand_new_real().
 
+Here's how the reduction ad adsurdum goes:
+
+* Assume we *can* write a generator to produce all possible reals
 
