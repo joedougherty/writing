@@ -37,7 +37,7 @@ This seems all fine and good as far as it goes. You start work on a Primes gener
 
 "How many primes are there again?" 
 
-You recall `Euclid's proof <https://mathcs.clarku.edu/~djoyce/java/elements/bookIX/propIX20.html>`  that there are infinite primes.
+You recall `Euclid's demonstration <https://mathcs.clarku.edu/~djoyce/java/elements/bookIX/propIX20.html>`_ that there are infinite primes.
 
 "Infinitely many." 
 
@@ -59,14 +59,7 @@ You smile to yourself as you dash off the following into the buffer:
     Ends_in_Zero = ends_in_zero()
 
 
-[ -- Not sure if this belongs here -- ]
-George asks enthusiastically about the second `yield` in your ends_in_zero implementation. 
-
-"Well, I realized we needed to include the negative numbers that ended in zero as well." 
-[ -- Not sure if this belongs here -- ]
-        
-
-You cackle maniacally as you prepare to call `len([_ for _ in Ends_in_Zero])` knowing full well this will pin a core and render the current terminal sesssion useless. 
+You cackle maniacally as you prepare to call :code:`len([_ for _ in Ends_in_Zero])` knowing full well this will pin a core and render the current terminal sesssion useless. 
 
 George defers to your apparent temporary insanity and agrees to be direct in his pedagogy moving forward.
 
@@ -191,39 +184,32 @@ George asks if you were able to write the mapping function from the naturals to 
         return plus_two % 2
 
 
-    def brand_new_real(G):
+    def brand_new_real(R):
         digit_place = 1
-        for real in G:
-            while True:
-                for i in range(0, digit_place):
-                    nth_digit = next(real)
-                yield mirror_digit(nth_digit)
+        for real in R:
+            for i in range(0, digit_place):
+                nth_digit = next(real)
+            yield mirror_digit(nth_digit)
             digit_place += 1
 
 
 "Wh-what _is_ this?" 
 
-`mirror_digit` takes a digit [0-9] and returns the provided digit plus 2. If the given digit + 2 
+`mirror_digit` takes a digit [0-9] and returns the provided digit plus 2. If the given digit + 2 would result in a two-digit number, it just wraps back around to 0. This function allows us to create a sequence of numbers we haven't seen yet. 
 
-would result in a two-digit number, it just wraps back around to 0. This function allows us to 
-
-create a sequence of numbers we haven't seen yet. For example, if you composed `mirror_digit` with
-
-one of the reals generators (such as `alternating_sequence()`), you would get a new number that would
-
-differ from the original number by *every single digit*.
+For example, if you composed `mirror_digit` with one of the reals generators (such as `alternating_sequence()`), you would get a new number that would differ from the original number by *every single digit*.
 
 We can exploit this to *guarantee* we can generate a previously ungenerated real. 
 
 We create a sequence where we generate:
 
-    * the mirror of the first digit of the first real
-    * the mirror of the second digit of the second real
-    * the mirror of the third digit of the third real
-    and so on ...
+* the mirror of the first digit of the first real
+* the mirror of the second digit of the second real
+* the mirror of the third digit of the third real
+* and so on ...
 
-(That's what's going on with that digit_place variable. I want to call next() as many times as reals generators I've seen 
+(That's what's going on with that digit_place variable. I want to call next() as many times as reals generators I've seen so far.)
 
-so far.)
+Here's the crux of it! When George said it can't be done, it's because you can always generate a new real using the power of brand_new_real().
 
-Here's the crux of it! When George said it can't be done, it's because you can always generate a new real using the power of brand_new_real(). But if it's new, then you can't map the naturals to the reals!
+
