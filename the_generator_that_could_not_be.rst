@@ -108,7 +108,7 @@ George shows some clever mappings.
 
 	# Map naturals to rationals to show 
 	# they have one-to-one correspondence
-	def inverse_paring(n):
+    def inverse_paring(n):
         pass
 
 
@@ -195,27 +195,29 @@ George asks if you were able to write the mapping function from the naturals to 
 
 :code:`mirror_digit` takes a digit [0-9] and returns the provided digit plus 2. If the given digit + 2 would result in a two-digit number, it just wraps back around to 0. This function allows us to create a sequence of numbers we haven't seen yet. 
 
-+-+-+
-|0|2|
-+-+-+
-|1|3|
-+-+-+
-|2|4|
-+-+-+
-|3|5|
-+-+-+
-|4|6|
-+-+-+
-|5|7|
-+-+-+
-|6|8|
-+-+-+
-|7|9|
-+-+-+
-|8|0|
-+-+-+
-|9|1|
-+-+-+
++-----+-----+
+|Input|Ouput|
++-----+-----+
+|0    |2    |
++-----+-----+
+|1    |3    |
++-----+-----+
+|2    |4    |
++-----+-----+
+|3    |5    |
++-----+-----+
+|4    |6    |
++-----+-----+
+|5    |7    |
++-----+-----+
+|6    |8    |
++-----+-----+
+|7    |9    |
++-----+-----+
+|8    |0    |
++-----+-----+
+|9    |1    |
++-----+-----+
 
 For example, if you composed :code:`mirror_digit` with one of the reals generators (such as :code:`alternating_sequence()`), you would get a new number that would differ from the original number by **every single digit**.
 
