@@ -61,13 +61,11 @@ You smile to yourself as you dash off the following into the buffer:
 
 You cackle maniacally as you prepare to call :code:`len([_ for _ in Ends_in_Zero])` knowing full well this will pin a core and render the current terminal sesssion useless. 
 
-George defers to your apparent temporary insanity and agrees to be direct in his pedagogy moving forward.
+George can sense when he's pushed too hard. He agrees to be more direct.
 
 "Seriously, though. It's the same thing. They're both infinite."
 
-What about the second :code:`yield` in ends_in_zero()? Doesn't that somehow produce twice as many numbers as, say, naturals() which will only :code:`yield` once per iteration?
-
-You've known George long enough to know when he is only asking rhetorically. Thankfully, that's almost always followed by a period of clear, but rapid, explication.
+What about the second :code:`yield` in :code:`ends_in_zero()`? Doesn't that somehow produce twice as many numbers as, say, :code:`naturals()` which will only :code:`yield` once per iteration?
 
 "You are right, of course! There *are* just as many numbers ending in 0 as there are naturals, even when including the negative ones."
 
@@ -91,7 +89,7 @@ Here is a different way to express :code:`ends_in_zero`:
     Ends_in_Zero = ends_in_zero()
 
 
-This version helps to make the one-to-one correspondence more obvious (explicit?). 
+This version helps to make the one-to-one correspondence more obvious explicit. 
 
 Every time :code:`next(Ends_in_Zero)` is called, :code:`N` is advanced to produce a new value. 
 
@@ -197,6 +195,28 @@ George asks if you were able to write the mapping function from the naturals to 
 
 :code:`mirror_digit` takes a digit [0-9] and returns the provided digit plus 2. If the given digit + 2 would result in a two-digit number, it just wraps back around to 0. This function allows us to create a sequence of numbers we haven't seen yet. 
 
++-+-+
+|0|2|
++-+-+
+|1|3|
++-+-+
+|2|4|
++-+-+
+|3|5|
++-+-+
+|4|6|
++-+-+
+|5|7|
++-+-+
+|6|8|
++-+-+
+|7|9|
++-+-+
+|8|0|
++-+-+
+|9|1|
++-+-+
+
 For example, if you composed :code:`mirror_digit` with one of the reals generators (such as :code:`alternating_sequence()`), you would get a new number that would differ from the original number by **every single digit**.
 
 We can exploit this to generate a previously ungenerated real.
@@ -208,11 +228,18 @@ We create a sequence where we generate:
 * the mirror of the third digit of the third real
 * and so on ...
 
-(That's what's going on with that digit_place variable. I want to call next() as many times as reals generators I've seen so far.)
+(That's what's going on with that :code:`digit_place` variable. I want to call :code:`next()` as many times as reals generators I've seen so far.)
 
-Here's the crux of it! When George said it can't be done, it's because you can always generate a new real using the power of brand_new_real().
+Here's the crux of it! When George said it can't be done, it's because you can always generate a new real using the power of :code:`brand_new_real()`.
 
-Here's how the reduction ad adsurdum goes:
+Here's how the argument goes:
 
-* Assume we *can* write a generator to produce all possible reals
+* Assume we *can* write a generator to produce all the reals (Reals())
+* (Which, of course, would mean there'd be a one-to-one correspondence with the naturals)
+* However, we've *also* shown that we can generate a new real with :code:`brand_new_real()`
+* This is a problem! Reals() will never be able to produce :code:`brand_new_real()`
+* Reals() must be incomplete. 
+* More accurately, Reals() simply cannot do what it claims. 
+* It *isn't possible* to map the naturals to the reals.
+* Weirdest of all, there are somehow infinitely "more" reals than naturals. This is referred to as being *uncountably infinite*.
 
