@@ -236,12 +236,11 @@ Here's the crux of it! When George said it can't be done, it's because you can a
 
 Here's how the argument goes:
 
-* Assume we *can* write a generator to produce all the reals (Reals())
+* Assume we *can* write a generator to produce all the reals :code:`Reals()`
 * (Which, of course, would mean there'd be a one-to-one correspondence with the naturals)
 * However, we've *also* shown that we can generate a new real with :code:`brand_new_real()`
-* This is a problem! Reals() will never be able to produce :code:`brand_new_real()`
-* Reals() must be incomplete. 
-* More accurately, Reals() simply cannot do what it claims. 
+* This is a problem! :code:`Reals()` will never be able to produce :code:`brand_new_real()`
+* :code:`Reals()` must be incomplete. More accurately, :code:`Reals()` simply cannot do what it claims. 
 * It *isn't possible* to map the naturals to the reals.
 
 There are somehow infinitely "more" reals than naturals. In more formal terms, the set of the reals is said to have a greater cardinality than the set of the naturals. 
