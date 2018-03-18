@@ -106,8 +106,8 @@ George shows some clever mappings.
 
 .. code-block:: python
 
-	# Map naturals to rationals to show 
-	# they have one-to-one correspondence
+    # Map naturals to rationals to show 
+    # they have one-to-one correspondence
     def inverse_paring(n):
         pass
 
