@@ -84,6 +84,7 @@ Here is a different way to express :code:`ends_in_zero()`:
             return ((n + 1) // 2) * 10
     
     def ends_in_zero():
+        N = naturals()
         return (map_nat_to_eiz(_) for _ in N)
     
     Ends_in_Zero = ends_in_zero()
