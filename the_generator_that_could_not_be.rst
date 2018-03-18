@@ -71,7 +71,7 @@ What about the second :code:`yield` in :code:`ends_in_zero()`? Doesn't that some
 
 "The key is that we can map every natural number to precisely one number being produced in the new generator."
 
-Here is a different way to express :code:`ends_in_zero`:
+Here is a different way to express :code:`ends_in_zero()`:
 
 .. code-block:: python
 
