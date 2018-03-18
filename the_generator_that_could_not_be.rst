@@ -244,5 +244,5 @@ Here's how the argument goes:
 * More accurately, Reals() simply cannot do what it claims. 
 * It *isn't possible* to map the naturals to the reals.
 
-There are somehow infinitely "more" reals than naturals. In more formal terms, the set of the reals is said to have a greater cardinality than theset of the naturals. 
+There are somehow infinitely "more" reals than naturals. In more formal terms, the set of the reals is said to have a greater cardinality than the set of the naturals. 
 
