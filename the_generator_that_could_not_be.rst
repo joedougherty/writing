@@ -14,7 +14,7 @@ You happen to both know a bit of Python. George decides to explain some of his i
 .. code-block:: python
 
     def naturals():
-        n = 1
+        n = 0
         while True:
             yield n
             n += 1
