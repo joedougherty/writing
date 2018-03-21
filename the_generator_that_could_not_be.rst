@@ -3,9 +3,7 @@ The Generator that Could Not Be
 ===============================
 
 
-Your friend George is a real math whiz. He has all these interesting ideas about infinity to share.
-
-Every now and again he tries to explain some of his ideas, but they never quite seem to stick. 
+Your friend George is a real math whiz. He has all these interesting ideas about infinity to share. Every now and again he tries to explain some of his ideas, but they never quite seem to stick. 
 
 You happen to both know a bit of Python. George decides to explain some of his ideas in terms of programming.
 
@@ -20,6 +18,11 @@ You happen to both know a bit of Python. George decides to explain some of his i
             n += 1
 
     N = naturals()
+    
+    next(N) # 0
+    next(N) # 1
+    next(N) # 2
+    # and so on ...
 
 Likewise, the odds, evens, etc.
 
