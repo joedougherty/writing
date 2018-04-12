@@ -3,11 +3,15 @@ The Generator that Could Not Be
 ===============================
 
 
-Your friend George is a real math whiz. He has all these interesting ideas about infinity to share. Every now and again he tries to explain some of his ideas, but they never quite seem to stick. 
+Your friend George is a real math whiz. He has some very interesting ideas about infinity. Every now and again he tries to explain some of his ideas, but they never quite seem to stick. Perhaps its the formal terminology he uses. Perhaps it's the unfamiliar notation. Maybe it's both! Regardless, you resolve to find a common ground. 
 
-You happen to both know a bit of Python. George decides to explain some of his ideas in terms of programming.
+You may not be a strong theoretical mathematician, but you *do* happen to know a bit of Python. George thinks that ought to be enough to get started on the path toward taming the infinite. Heartened by his confidence, you begin.
 
-"First off, let's represent the Natural numbers." George proffers the following:
+George suggests that you start slow and try to find a representation on that natural numbers. Of course, computer memory isn't infinite, so you can't actually create a infinite sequence of numbers. Lists, tuples, and arrays are all out. 
+
+What we want is something that could give us all the natural numbers *in principle*. Trying to list them all out one-by-one will never work. Is there some Python feature that can help here?
+
+What about a generator? It will only produce one value at a time, but in principle it would never stop! Here's a first shot at representing the natural numbers
 
 .. code-block:: python
 
@@ -24,7 +28,7 @@ You happen to both know a bit of Python. George decides to explain some of his i
     next(N) # 2
     # and so on ...
 
-Likewise, the odds, evens, etc.
+You can use this same idea to express the odds, evens, etc.
 
 .. code-block:: python
 
@@ -189,7 +193,7 @@ George asks if you were able to write the mapping function from the naturals to 
     def brand_new_real(R):
         digit_place = 1
         for real in R:
-            for i in range(0, digit_place):
+            for i in range(0, digit_place): # Advance
                 nth_digit = next(real)
             yield mirror_digit(nth_digit)
             digit_place += 1
