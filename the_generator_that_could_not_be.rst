@@ -11,7 +11,7 @@ George suggests that you start slow and try to find a representation on that nat
 
 What we want is something that could give us all the natural numbers *in principle*. Trying to list them all out one-by-one will never work. Is there some Python feature that can help here?
 
-What about a generator? It will only produce one value at a time, but in principle it would never stop! Here's a first shot at representing the natural numbers
+What about a generator? It will only produce one value at a time, but in principle it would never stop! Here's a first shot at representing the natural numbers:
 
 .. code-block:: python
 
