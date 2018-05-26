@@ -46,7 +46,11 @@ While functionally correct, that :code:`global` simply must go. Maybe try it as 
     naturals.produce() # 2
 
 
-You scrutinize the implementations side-by-side. Hmm...isn't there a more plain way of saying "subsequent" in :code:`subsequent_natural`? And what about "Producer" in the class name? Like a bolt from the blue it finally hits you: "subsequent" -> "next"! "Producer" -> "`generator <https://www.python.org/dev/peps/pep-0255/>_`!
+You scrutinize the implementations side-by-side. Isn't there a more plain way of saying "subsequent" in :code:`subsequent_natural`? And what about "Producer" in the class name? Like a bolt from the blue it finally hits you: 
+
+"**subsequent**" -> "**next**"! 
+
+"**Producer**" -> "**`generator <https://www.python.org/dev/peps/pep-0255/>_`**!
 
 .. code-block:: python
 
