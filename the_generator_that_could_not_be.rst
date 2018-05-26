@@ -14,18 +14,39 @@ George suggests your first step ought to be to try to find a representation on t
 Having never been one to be put off by the apparent lack of an obvious built-in for your problem, you start to play around in a REPL session.
 
 .. code-block:: python
-n = 0
 
-def n_plus_one():
-    global n
-    if n == 0:
-        return 0
-    n += 1
-    return n
+    n = -1
 
-What we want is something that could give us all the natural numbers *in principle*. Is there some Python feature that can help here?
+    def subsequent_natural():
+        global n
+        n += 1
+        return n
 
-What about a generator? It will only produce one value at a time, but in principle it would never stop!  
+    subsequent_natural() # 0
+    subsequent_natural() # 1 
+    subsequent_natural() # 2
+
+
+While functionally correct, that :code:`global` simply must go. Maybe try it as a class.
+
+.. code-block:: python
+
+    class NaturalsProducer(object):
+        def __init__(self):
+            self.n = -1
+
+        def produce(self):
+            self.n += 1
+            return n
+
+    naturals = Naturals()
+
+    naturals.produce() # 0
+    naturals.produce() # 1
+    naturals.produce() # 2
+
+
+You scrutinize the implementations side-by-side. Hmm...isn't there a more plain way of saying "subsequent" in :code:`subsequent_natural`? And what about "Producer" in the class name? Like a bolt from the blue it finally hits you: "subsequent" -> "next"! "Producer" -> "`generator <https://www.python.org/dev/peps/pep-0255/>_`!
 
 .. code-block:: python
 
