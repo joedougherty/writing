@@ -3,15 +3,29 @@ The Generator that Could Not Be
 ===============================
 
 
-Your friend `George <https://en.wikipedia.org/wiki/Georg_Cantor>`_ is a real math whiz. He has some very interesting ideas about infinity. Every now and again he tries to explain some of his ideas, but they never quite seem to stick. Perhaps its the formal terminology he uses. Perhaps it's the unfamiliar notation. Maybe it's both! Regardless, you resolve to find a common ground. 
+Your friend `George <https://en.wikipedia.org/wiki/Georg_Cantor>`_ is a real math whiz. He has some very interesting ideas about infinity. Every now and again h, but they never quite seem to stick. Perhaps its the `formal terminology <https://www.transfinite.com/content/about5>`_ he uses. Perhaps it's the `unfamiliar notation <http://mathworld.wolfram.com/Aleph-0.html>`_. Maybe it's both! Regardless, you resolve to find a common ground. 
 
-You may not be a strong theoretical mathematician, but you *do* happen to know a bit of Python. George thinks that ought to be enough to get started on the path toward taming the infinite. Heartened by his confidence, you begin.
+You may not be a strong theoretical mathematician, but you *do* happen to know a bit of Python. George thinks that ought to be enough to get started on the path toward taming the infinite. Heartened by his confidence, you decide to sit down with him and let him try to guide you down this arcane path.
 
-George suggests that you start slow and try to find a representation on that natural numbers. Of course, computer memory isn't infinite, so you can't actually create a infinite sequence of numbers. Lists, tuples, and arrays are all out. 
+------------
 
-What we want is something that could give us all the natural numbers *in principle*. Trying to list them all out one-by-one will never work. Is there some Python feature that can help here?
+George suggests your first step ought to be to try to find a representation on the `natural numbers <http://mathworld.wolfram.com/NaturalNumber.html>`_. Of course, computer memory isn't infinite, so you can't actually create a infinite sequence of numbers. Lists, tuples, and arrays are all out. 
 
-What about a generator? It will only produce one value at a time, but in principle it would never stop! Here's a first shot at representing the natural numbers:
+Having never been one to be put off by the apparent lack of an obvious built-in for your problem, you start to play around in a REPL session.
+
+.. code-block:: python
+n = 0
+
+def n_plus_one():
+    global n
+    if n == 0:
+        return 0
+    n += 1
+    return n
+
+What we want is something that could give us all the natural numbers *in principle*. Is there some Python feature that can help here?
+
+What about a generator? It will only produce one value at a time, but in principle it would never stop!  
 
 .. code-block:: python
 
