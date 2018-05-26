@@ -3,7 +3,7 @@ The Generator that Could Not Be
 ===============================
 
 
-Your friend George is a real math whiz. He has some very interesting ideas about infinity. Every now and again he tries to explain some of his ideas, but they never quite seem to stick. Perhaps its the formal terminology he uses. Perhaps it's the unfamiliar notation. Maybe it's both! Regardless, you resolve to find a common ground. 
+Your friend `George <https://en.wikipedia.org/wiki/Georg_Cantor>`_ is a real math whiz. He has some very interesting ideas about infinity. Every now and again he tries to explain some of his ideas, but they never quite seem to stick. Perhaps its the formal terminology he uses. Perhaps it's the unfamiliar notation. Maybe it's both! Regardless, you resolve to find a common ground. 
 
 You may not be a strong theoretical mathematician, but you *do* happen to know a bit of Python. George thinks that ought to be enough to get started on the path toward taming the infinite. Heartened by his confidence, you begin.
 
