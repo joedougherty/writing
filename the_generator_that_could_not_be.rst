@@ -11,7 +11,7 @@ You may not be a strong theoretical mathematician, but you *do* happen to know a
 
 George suggests your first step ought to be to try to find a representation on the `natural numbers <http://mathworld.wolfram.com/NaturalNumber.html>`_. Of course, computer memory isn't infinite, so you can't actually create a infinite sequence of numbers. Lists, tuples, and arrays are all out. 
 
-Having never been one to be put off by the apparent lack of an obvious built-in for your problem, you start to play around in a REPL session.
+Not being one to be put off by the apparent lack of an built-in for your use case, you start to play around in a REPL session.
 
 .. code-block:: python
 
@@ -48,9 +48,9 @@ While functionally correct, that :code:`global` simply must go. Maybe try it as 
 
 You scrutinize the implementations side-by-side. Isn't there a more plain way of saying "subsequent" in :code:`subsequent_natural`? And what about "Producer" in the class name? It hits you like a bolt from the blue: 
 
-"subsequent" -> `next <https://docs.python.org/3/library/functions.html#next>`_!
+*subsequent* -> **`next <https://docs.python.org/3/library/functions.html#next>`_**
 
-"Producer" -> `generator <https://www.python.org/dev/peps/pep-0255/>`_!
+*Producer* -> **`generator <https://www.python.org/dev/peps/pep-0255/>`_**
 
 .. code-block:: python
 
