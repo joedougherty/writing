@@ -39,18 +39,18 @@ While functionally correct, that :code:`global` simply must go. Maybe try it as 
             self.n += 1
             return n
 
-    naturals = Naturals()
+    N = Naturals()
 
-    naturals.produce() # 0
-    naturals.produce() # 1
-    naturals.produce() # 2
+    N.produce() # 0
+    N.produce() # 1
+    N.produce() # 2
 
 
 You scrutinize the implementations side-by-side. Isn't there a more plain way of saying "subsequent" in :code:`subsequent_natural`? And what about "Producer" in the class name? It hits you like a bolt from the blue: 
 
-*subsequent* -> **`next <https://docs.python.org/3/library/functions.html#next>`_**
+*subsequent* -> `next <https://docs.python.org/3/library/functions.html#next>`_
 
-*Producer* -> **`generator <https://www.python.org/dev/peps/pep-0255/>`_**
+*Producer* -> `generator <https://www.python.org/dev/peps/pep-0255/>`_
 
 .. code-block:: python
 
@@ -77,6 +77,14 @@ In fact, there's an even more succinct expression possible. You combine the powe
     def naturals():
         return (n for n in itertools.count())
 
+    N = naturals()
+
+    next(N) # 0
+    next(N) # 1
+    next(N) # 2
+    # and so on ...
+
+--------
 
 You can use this same idea to express the odds, evens, etc.
 
