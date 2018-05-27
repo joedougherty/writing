@@ -48,9 +48,9 @@ While functionally correct, that :code:`global` simply must go. Maybe try it as 
 
 You scrutinize the implementations side-by-side. Isn't there a more plain way of saying "subsequent" in :code:`subsequent_natural`? And what about "Producer" in the class name? Like a bolt from the blue it finally hits you: 
 
-"**subsequent**" -> "**next**"! 
+"subsequent" -> *"`next <https://docs.python.org/3/library/functions.html#next>`_"*! 
 
-**"Producer"** -> **"`generator <https://www.python.org/dev/peps/pep-0255/>_`"**!
+"Producer" -> *"`generator <https://www.python.org/dev/peps/pep-0255/>`_"*!
 
 .. code-block:: python
 
@@ -68,7 +68,7 @@ You scrutinize the implementations side-by-side. Isn't there a more plain way of
     # and so on ...
 
     
-In fact, there's an even more succinct expression possible. You combine the powers of :code:`itertools` and `generator expressions <https://www.python.org/dev/peps/pep-0289/>_` to produce:
+In fact, there's an even more succinct expression possible. You combine the powers of :code:`itertools` and `generator expressions <https://www.python.org/dev/peps/pep-0289/>`_:
 
 .. code-block:: python
 
