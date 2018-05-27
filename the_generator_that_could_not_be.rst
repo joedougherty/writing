@@ -50,7 +50,7 @@ You scrutinize the implementations side-by-side. Isn't there a more plain way of
 
 "**subsequent**" -> "**next**"! 
 
-"**Producer**" -> "**`generator <https://www.python.org/dev/peps/pep-0255/>_`**!
+**"Producer"** -> **"`generator <https://www.python.org/dev/peps/pep-0255/>_`"**!
 
 .. code-block:: python
 
@@ -66,6 +66,17 @@ You scrutinize the implementations side-by-side. Isn't there a more plain way of
     next(N) # 1
     next(N) # 2
     # and so on ...
+
+    
+In fact, there's an even more succinct expression possible. You combine the powers of :code:`itertools` and `generator expressions <https://www.python.org/dev/peps/pep-0289/>_` to produce:
+
+.. code-block:: python
+
+    import itertools
+
+    def naturals():
+        return (n for n in itertools.count())
+
 
 You can use this same idea to express the odds, evens, etc.
 
