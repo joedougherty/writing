@@ -3,7 +3,7 @@ The Generator that Could Not Be
 ===============================
 
 
-Your friend `George <https://en.wikipedia.org/wiki/Georg_Cantor>`_ is a real math whiz. He has some very interesting ideas about infinity. Every now and again h, but they never quite seem to stick. Perhaps its the `formal terminology <https://www.transfinite.com/content/about5>`_ he uses. Perhaps it's the `unfamiliar notation <http://mathworld.wolfram.com/Aleph-0.html>`_. Maybe it's both! Regardless, you resolve to find a common ground. 
+Your friend `George <https://en.wikipedia.org/wiki/Georg_Cantor>`_ is a real math whiz. He has some very interesting ideas about infinity. Every now and again he starts to explain his ideas, but they never quite seem to stick. Perhaps it's the `formal terminology <https://www.transfinite.com/content/about5>`_ he uses. Perhaps it's the `unfamiliar notation <http://mathworld.wolfram.com/Aleph-0.html>`_. Perhaps it's both! Regardless, you resolve to find a common ground. 
 
 You may not be a strong theoretical mathematician, but you *do* happen to know a bit of Python. George thinks that ought to be enough to get started on the path toward taming the infinite. Heartened by his confidence, you decide to sit down with him and let him try to guide you down this arcane path.
 
@@ -84,9 +84,8 @@ In fact, there's an even more succinct expression possible. You combine the powe
     next(N) # 2
     # and so on ...
 
---------
 
-You can use this same idea to express the odds, evens, etc.
+You use this same idea to express the odds, evens, etc.
 
 .. code-block:: python
 
@@ -98,17 +97,15 @@ You can use this same idea to express the odds, evens, etc.
 
     Odds = odds()
 
-This seems all fine and good as far as it goes. You start work on a Primes generator. George waits patiently for you to run a few tests. Once you are satisfied he inquires: 
+This seems all fine and good as far as it goes. You are feeling satisfied with today's progress. George agrees to meet the next day to continue. 
 
-"How many primes are there again?" 
+--------
 
-You recall `Euclid's demonstration <https://mathcs.clarku.edu/~djoyce/java/elements/bookIX/propIX20.html>`_ that there are infinite primes.
 
-"Infinitely many." 
 
-Your terseness belies your anticipation of his next question. You know that something fun must be around the corner.
+You know that something fun must be around the corner.
 
-"How about, oh, numbers that end in 0?"
+"How about numbers ending in 0?"
 
 You smile to yourself as you dash off the following into the buffer:
 
@@ -182,9 +179,7 @@ George shows some clever mappings.
 
 You start packing your things up, glad that you were finally able to pick up on George's ideas.
 
-"Well..." you hear George start in.
-
-"What do you think about the Reals? Say, all the reals between [0,1]."
+"Well..." you hear George start in. "What do you think about the Reals? Say, all the reals between [0,1]."
 
 You immediately start to grow unsure. Why did he always do this? 
 
@@ -230,6 +225,8 @@ Seems fine so far. And there's no issue with a generator that yields other gener
 So far it is not clear what George is hinting at. True, it isn't obvious how to write the mapping function from the naturals to the reals. Nor was it obvious how to map to the rationals!
 
 You need to be going, but agree to meet with George next week for what he promises will be a thrilling conclusion.
+
+--------
 
 A week has passed. 
 
