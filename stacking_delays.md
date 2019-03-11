@@ -28,6 +28,10 @@ Amp settings:
 
 * All settings (drive, bass, mid, etc. around 30-40%, except for volume at 90-95%)
 
+Right amp:
+
+* Same amp/combo. Try a different mic to expand your sound. Currently using the 421 Dynamic on the right side.
+
 #### After Amp ####
 
 * Reverb -- Octo (DECAY: 67% PREDELAY: 14ms TONE: 100% MIX:52%)
