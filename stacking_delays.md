@@ -38,3 +38,6 @@ Right amp:
 * Lo Res Delay (TIME: 1998ms)
 * Tape Echo Dry (TIME: 666ms)
 * Volume Pedal
+
+
+![Patch image](https://raw.githubusercontent.com/joedougherty/writing/drafts/assets/multitudes_patch.png)
