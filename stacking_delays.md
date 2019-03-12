@@ -1,6 +1,6 @@
 ## Stacking Delays ##
 
-I wanted to jot down some notes of trying some ideas like these https://www.youtube.com/watch?v=bBsRmJ4QHwM using the Line 6 Pod HD500X.
+I wanted to jot down some notes on trying some ideas like those found (here)[https://www.youtube.com/watch?v=bBsRmJ4QHwM] using the Line 6 Pod HD500X.
 
 
 ### Multitudes ###
