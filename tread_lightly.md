@@ -1,9 +1,6 @@
-## Fiddy One Fiddy ##
+## TREAD SIMPLY ##
 
 I wanted to jot down some notes on a Line6 Pod HD500X single-amp patch I use all the time.
-
-
-### TREAD SIMPLY ###
 
 
 ![Patch image](https://raw.githubusercontent.com/joedougherty/writing/drafts/assets/head.jpg)
