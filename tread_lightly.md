@@ -46,7 +46,7 @@ There are a few effects blocks I put in front of this amp. They are, in order fr
 * Volume Pedal
 
 
-#### Noise Gate ####
+### Noise Gate ###
 
 **ESSENTIAL. DON'T LEAVE HOME WITHOUT IT.**
 
@@ -55,7 +55,7 @@ Use knob 2 to select "HARD GATE". It should be the first option after "NOISE GAT
 The default Open Threshold and -65.0 settings have worked fine for me.
 
 
-#### Boost Compression ####
+### Boost Compression ###
 
 Keep it tight. I like the following settings:
 
@@ -66,7 +66,7 @@ Keep it tight. I like the following settings:
 * OUTPUT:   58%
 
 
-#### Tube Drive ####
+### Tube Drive ###
 
 (Think, Tubescreamer.) Add some grit!
 
@@ -78,6 +78,6 @@ Keep it tight. I like the following settings:
 * OUTPUT:   82%
 
 
-#### Volume Pedal ####
+### Volume Pedal ###
 
 Self-explanatory.
