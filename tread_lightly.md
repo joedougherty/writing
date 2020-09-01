@@ -14,7 +14,7 @@ I wanted to jot down some notes on a Line6 Pod HD500X single-amp patch I use all
 **Mic**:    57 OFF XS 
 
 
-Here are the EQ settings:
+Here are the EQ settings. Note that everything is set to 0 on the bottom row. This is because we're using a single-amp setup. If we add a second amp, you'll see the controls update accordingly.
 
 
 ![Patch image](https://raw.githubusercontent.com/joedougherty/writing/drafts/assets/eq.jpg)
