@@ -81,3 +81,8 @@ Keep it tight. I like the following settings:
 ### Volume Pedal ###
 
 Self-explanatory.
+
+
+## FURTHER READING ##
+
+[http://foobazaar.com/podhd/toneGuide/quickGuide](http://foobazaar.com/podhd/toneGuide/quickGuide)
