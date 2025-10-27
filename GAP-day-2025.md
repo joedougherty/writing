@@ -7,6 +7,7 @@ I rode from Squirrel Hill in Pittsburgh to Cumberland, MD in one day on
 
 ## By the Numbers
 
+
 | Distance Ridden          | 152.48 miles / 245.39 km |
 | Amount of Gain           | 2527 ft / 770 m          |
 | Average Pace             | 13.5 mph / 21.7 km/h     |
