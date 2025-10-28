@@ -3,7 +3,7 @@
 ## TLDR
 
 I rode from Squirrel Hill in Pittsburgh to Cumberland, MD in one day on 
-2025-10-23 averaging 13.5 mph along the Great Allegheny Passage trail.
+2025-10-23 along the [Great Allegheny Passage trail](https://www.gaptrail.org).
 
 ## By the Numbers
 
@@ -22,9 +22,10 @@ I rode from Squirrel Hill in Pittsburgh to Cumberland, MD in one day on
 | Deer Seen                | Dozens                   |
 | Opossums Seen            | 1                        |
 | Bald Eagles Seen         | 1                        |
+| Cats Seen                | 2                        |
 | Cats Petted              | 1                        |
 
-I started my ride at 4AM. I decided to pick up the [Great Allegheny Passage](https://www.gaptrail.org) 
+I started my ride at 4AM. I decided to pick up the Great Allegheny Passage 
 at the [Hot Metal Bridge](https://gaptrail.org/amenities/hot-metal-bridge/). I didn't feel like that it 
 was necessary to ride to [the Point](https://gaptrail.org/amenities/point-state-park/) and backtrack 
 since I had a long day ahead of me. I routinely ride those five miles between Squirrel Hill and Downtown. 
