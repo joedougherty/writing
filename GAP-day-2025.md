@@ -50,7 +50,7 @@ a lot of fun and felt close to effortless after the long ascent up to the divide
 This was my longest one day ride yet. My prior longest ride was 125 miles in early September of this 
 year, so I reasoned this would be possible for me to accomplish.
 
-I think the GAP is an incredible resource. If you're wondering if you should ride it, I say do it as 
+The GAP is an incredible resource. If you're wondering if you should ride it, I say do it as 
 soon as humanly possible. It made for a great one day challenge, that's for sure! If you can do a 
 century, you can do the GAP in one day with some planning.
 
